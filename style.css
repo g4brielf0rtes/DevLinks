@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
 * {
   margin: 0;
@@ -23,16 +23,17 @@
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(assets/sun.svg)
+  --switch-bg-url: url(assets/sun.svg);
 }
 
 body * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
 body {
   background: var(--bg-url) no-repeat center/cover;
+  height: 100vh;
 }
 
 #container {
@@ -49,7 +50,7 @@ body {
   padding: 24px;
 }
 
-#profile img { 
+#profile img {
   width: 112px;
 }
 
@@ -79,7 +80,6 @@ body {
   left: 0;
   transform: translateY(-50%);
   z-index: 1;
-
 }
 
 .light #switch button {
@@ -89,7 +89,7 @@ body {
 
 #switch span {
   display: block;
-  
+
   width: 64px;
   height: 24px;
 
@@ -99,8 +99,6 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
-
-
 
 /* LINKS */
 
@@ -154,6 +152,17 @@ ul li a:hover {
 }
 
 #social-links a:hover {
- background: var(--highlight-color);
- 
+  background: var(--highlight-color);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(/assets/bg-dark-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(/assets/bg-light-desktop.jpg);
+  }
 }
